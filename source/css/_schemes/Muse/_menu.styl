@@ -1,17 +1,12 @@
 .site-nav {
   +mobile() {
-    background: white;
     border-bottom: 1px solid $gray-lighter;
+    border-top: 1px solid $gray-lighter;
     left: 0;
     margin: 0;
     padding: 0;
     width: 100%;
-    z-index: $zindex-3;
   }
-}
-
-.site-nav-toggle {
-  top: 50px;
 }
 
 .menu {
@@ -21,22 +16,22 @@
 }
 
 .menu-item-active a {
-  border-bottom: 1px solid $menu-link-hover-border;
-  color: $black-deep;
+  background: transparent;
+  border-bottom: 1px solid var(--link-hover-color) !important;
 
   +mobile() {
-    border-bottom: 1px dotted $gray-lighter;
+    border-bottom: 1px dotted $gray-lighter !important;
   }
 }
 
 .menu .menu-item {
   +mobile() {
-    display: block;
     margin: 0 10px;
-    vertical-align: top;
   }
 
   a, span.exturl {
+    border-bottom: 1px solid transparent;
+
     +mobile() {
       padding: 5px 10px;
     }
@@ -63,7 +58,7 @@
   }
 
   .badge {
-    background-color: $gainsboro;
+    background: $gainsboro;
     padding: 1px 4px;
   }
 }
